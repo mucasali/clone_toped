@@ -37,8 +37,7 @@ export default class SideBar extends Component{
               <Left><Icon name="ios-settings-outline" style={styles.icon}/></Left>
               <Body><Text style={{color:config.themeColor}}>Kategori</Text></Body>
             </ListItem>
-            <ListItem icon onPress={()=>{ Actions.About() }}>
-              <Left><Icon name="ios-information-circle-outline" style={styles.icon}/></Left>
+            <ListItem icon onPress={()=>{ Actions.LoginScreen() }}>
               <Body><Text style={{color:config.themeColor}}>Masuk</Text></Body>
             </ListItem>
             <ListItem icon onPress={()=>{

@@ -25,8 +25,19 @@ class User {
     return result;
   }
 
-  login(email, password){
-    this.activeUser = {email : email, password : password, name : "dumy name", ponsel : "dumy ponsel"}
+  login(data){
+    let result = {status : true, message : "register berhasil"}
+    Object.keys(data).map((key, iter)=>{
+      const item = data[key];
+      if(!item){
+        result = {status : false, message : "register Gagal, data "+key+" kosong"}
+        return
+      }
+    })
+    if(result.status){
+      this.activeUser = {email : data.email, password : data.password, name : "dumy name", ponsel : "dumy ponsel"}
+    }
+    return result;
   }
 
   logout(){

@@ -4,6 +4,7 @@ import {Actions, Scene, Router} from 'react-native-router-flux';
 import SideBar from './src/components/SideBar'
 import HomeScreen from './src/containers/HomeScreen'
 import RegisterScreen from './src/containers/AuthScreen/Register'
+import LoginScreen from './src/containers/AuthScreen/Login'
 
 import UserStore from './src/store/User'
 
@@ -23,9 +24,12 @@ export default class App extends Component<{}> {
         <Scene key="root">
           <Scene key="drawer" drawer contentComponent={SideBar} open={true} hideNavBar>
             <Scene key="main" >
-              <Scene key="RegisterScreen" component={RegisterScreen} store={UserStore} hideNavBar/>
+              <Scene key="LoginScreen" component={LoginScreen} store={UserStore} hideNavBar/>
 
               <Scene key="HomeScreen" component={HomeScreen} hideNavBar/>
+              <Scene key="RegisterScreen" component={RegisterScreen} store={UserStore} hideNavBar/>
+
+
             </Scene>
           </Scene>
         </Scene>
