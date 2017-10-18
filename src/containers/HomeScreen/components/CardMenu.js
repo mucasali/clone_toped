@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import {Image, Text} from 'react-native'
 import {Card, CardItem, Col, Row, Grid, Button, Icon} from 'native-base'
+import {Actions} from 'react-native-router-flux'
 
 const renderCol = ({key, title, icon}, iter)=>{
   return(
       <Col key={key} style={{padding:10}}>
-        <Button iconLeft transparent>
+        <Button iconLeft transparent onPress={()=>{Actions.ListProduct({keyKategori:key, title:title})}}>
           <Image
             style={{width: 30, height: 30, resizeMode: 'contain'}}
             source={{uri: icon}}
