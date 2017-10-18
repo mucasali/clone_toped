@@ -10,18 +10,18 @@ import {Container, Content, Header, Left, Button,
   Icon, Body, Right, Title} from 'native-base'
 import {Actions} from 'react-native-router-flux'
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import config from '../../config'
+import CardMenu from './components/CardMenu'
+import DumyData from './DumyData.json'
 
 export default class App extends Component<{}> {
 
   renderHeader(title){
     return(
-      <Header>
+      <Header
+        androidStatusBarColor={config.themeColor2}
+        searchBar={true}
+        style={{backgroundColor:config.themeColor}}>
         <Left>
           <Button transparent onPress={Actions.drawerOpen}>
             <Icon name='menu' />
@@ -35,22 +35,19 @@ export default class App extends Component<{}> {
     )
   }
 
+
   render() {
+    console.log('dumy data', DumyData);
+    const {kategori_menu} = DumyData;
     return (
       <Container>
         {this.renderHeader("test")}
-        <Content >
-          <View style={styles.container}>
-            <Text style={styles.welcome}>
-              Welcome to React Native!
-            </Text>
-            <Text style={styles.instructions}>
-              To get started, edit App.js
-            </Text>
-            <Text style={styles.instructions}>
-              {instructions}
-            </Text>
-          </View>
+        <Content style={{margin:5}}>
+          {
+            kategori_menu.map((kategori, iter)=>{
+              return <CardMenu kategori={kategori} key={iter}/>
+            })
+          }
         </Content>
       </Container>
     );

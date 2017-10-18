@@ -1,0 +1,94 @@
+{
+  "kategori_menu" : [
+    {"key":"gayaHidup", "name" : "Gaya Hidup",
+      "menu":[
+          [
+            {"key":"fashionWanita", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_fashion_woman.png", "title":"Fashion Wanita"},
+            {"key":"fashionPria", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_fashion_man.png", "title":"Fashion Pria"}
+          ],
+          [
+            {"key":"fashionMuslim", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_fashion_muslim.png", "title":"Fashion Muslim"},
+            {"key":"fashionAnak", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_fashion_anak.png", "title":"Fashion Anak"}
+          ],
+          [
+            {"key":"kecantikan", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kecantikan.png", "title":"Kecantikan"},
+            {"key":"rumahTangga", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_rumah.png", "title":"Rumah tangga"}
+          ],
+          [
+            {"key":"kesehatan", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kesehatan.png", "title":"Kesehatan"}
+          ]
+        ]},
+    {"key":"teknologi", "name" : "Teknologi",
+      "menu":[
+          [
+            {"key":"handphoneTablet", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_hp.png", "title":"Handphone & Tablet"},
+            {"key":"laptopAksesoris", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_laptop.png", "title":"Laptop & Aksesoris"}
+          ],
+          [
+            {"key":"komputerAksesoris", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_computer.png", "title":"Komputer & Aksesoris"},
+            {"key":"elektronik", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_elektronik.png", "title":"Elektronik"}
+          ],
+          [
+            {"key":"kamera", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kamera.png", "title":"Kamera"},
+            {"key":"gaming", "icon":"https://ecs7.tokopedia.net/img/category/icon_gaming.png", "title":"Gaming"}
+          ],
+      ]
+    },
+    {"key":"kategoriLain", "name" : "Kategori lain",
+      "menu":[
+        [
+          {"key":"mainanHobi", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_mainan.png", "title":"Mainan & Hobi"},
+          {"key":"makananMinuman", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_minuman.png", "title":"Makanan & Minuman"}
+        ],
+        [
+          {"key":"ibuBayi", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_bayi.png", "title":"Ibu & Bayi"},
+          {"key":"souvenir", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kado.png", "title":"Souvenir & Kado"}
+        ],
+        [
+          {"key":"office", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_stationary.png", "title":"Office & Stasionary"},
+          {"key":"buku", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_buku.png", "title":"Buku"}
+        ],
+        [
+          {"key":"filmMusik", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/ikon_video.png", "title":"Film & Musik"}
+
+        ],
+      ]
+    },
+    {"key":"pembayaran", "name" : "Pembayaran & Top Up",
+      "menu":[
+        [
+          {"key":"pulsa", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_paket.png", "title":"Pulsa"},
+          {"key":"paketData", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_wifi.png", "title":"Paket Data"}
+        ],
+        [
+          {"key":"tiket", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kereta.png", "title":"Tiket Kereta Api"},
+          {"key":"bpjs", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_bpjs.png", "title":"BPJS"}
+        ],
+        [
+          {"key":"listrik", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_listrik.png", "title":"Listrik PLN"},
+          {"key":"pdam", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_pdam.png", "title":"Air PDAM"}
+        ],
+        [
+          {"key":"telkom", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_telepon.png", "title":"Telkom"},
+          {"key":"tvKabel", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_tv_kabel.png", "title":"TV Kabel"}
+        ],
+        [
+          {"key":"angsurankredit", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_angsuran_kredit.png", "title":"Angsuran Kredit"},
+          {"key":"donasi", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_donasi.png", "title":"Donasi"}
+        ],
+      ]
+    },
+    {"key":"produkKeuangan", "name" : "Produk Keuangan",
+      "menu":[
+        [
+          {"key":"pinjaman", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_mitra_toppers.png", "title":"Pinjaman Modal"},
+          {"key":"kartuKredit", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_kartu_kredit.png", "title":"Kartu Kredit"}
+        ],
+        [
+          {"key":"pinjaman", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_pinjaman.png", "title":"Pinjaman Online"},
+          {"key":"asuransi", "icon":"https://ecs7.tokopedia.net/img/category/new/v1/icon_insurance.png", "title":"Asuransi"}
+        ],
+      ]
+    }
+  ]
+}
