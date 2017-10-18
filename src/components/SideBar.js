@@ -42,11 +42,9 @@ export default class SideBar extends Component{
               <Body><Text style={{color:config.themeColor}}>Masuk</Text></Body>
             </ListItem>
             <ListItem icon onPress={()=>{
-                logout()
-                Actions.AuthScreen();
+                Actions.RegisterScreen();
               }}
             >
-              <Left><Icon name="ios-log-out" style={styles.icon}/></Left>
               <Body><Text style={{color:config.themeColor}}>Daftar</Text></Body>
             </ListItem>
           </List>

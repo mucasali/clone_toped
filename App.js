@@ -3,6 +3,9 @@ import {Actions, Scene, Router} from 'react-native-router-flux';
 
 import SideBar from './src/components/SideBar'
 import HomeScreen from './src/containers/HomeScreen'
+import RegisterScreen from './src/containers/AuthScreen/Register'
+
+import UserStore from './src/store/User'
 
 
 const INITIAL_DETAIL = {parent_id : 0, directory_id : 0, name : "Mirrorizer"};
@@ -20,7 +23,9 @@ export default class App extends Component<{}> {
         <Scene key="root">
           <Scene key="drawer" drawer contentComponent={SideBar} open={true} hideNavBar>
             <Scene key="main" >
-              <Scene key="HomeScreen" component={HomeScreen} type="replace" hideNavBar/>
+              <Scene key="RegisterScreen" component={RegisterScreen} store={UserStore} hideNavBar/>
+
+              <Scene key="HomeScreen" component={HomeScreen} hideNavBar/>
             </Scene>
           </Scene>
         </Scene>
