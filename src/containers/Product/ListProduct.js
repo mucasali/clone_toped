@@ -35,21 +35,22 @@ export default class ListProduct extends Component<{}> {
   }
 
 
-  renderList({title, price, rate, seller, images}, iter){
+  renderList(product, iter){
+    const {title, price, rate, seller, images} = product;
     const {name, location} = seller;
     return(
       <List key={iter} style={{backgroundColor:"#FFF"}}>
-        <ListItem>
+        <ListItem onPress={()=>{Actions.DetailProduct({product:product})}}>
           <Thumbnail square source={{uri:images[0]}}
             style={{height:100,resizeMode: 'contain'}}
           />
-        <Body style={{paddingLeft:10, justifyContent:'space-between'}}>
-            <Text style={{fontWeight:'bold'}}>{title}</Text>
-            <Text style={{color:'red'}}>Rp. {price}</Text>
-            <Text style={{fontSize:10}}>{name}</Text>
-            <Text style={{fontSize:10, alignItems:'center'}}>
-              <Icon name="ios-locate-outline" style={{fontSize:10}}/> {location}
-            </Text>
+          <Body style={{paddingLeft:10, justifyContent:'space-between'}}>
+              <Text style={{fontWeight:'bold'}}>{title}</Text>
+              <Text style={{color:'red'}}>Rp. {price}</Text>
+              <Text style={{fontSize:10}}>{name}</Text>
+              <Text style={{fontSize:10, alignItems:'center'}}>
+                <Icon name="ios-locate-outline" style={{fontSize:10}}/> {location}
+              </Text>
           </Body>
         </ListItem>
       </List>

@@ -7,6 +7,7 @@ import RegisterScreen from './src/containers/AuthScreen/Register'
 import LoginScreen from './src/containers/AuthScreen/Login'
 
 import ListProduct from './src/containers/Product/ListProduct'
+import DetailProduct from './src/containers/Product/DetailProduct'
 
 import UserStore from './src/store/User'
 
@@ -29,9 +30,8 @@ export default class App extends Component<{}> {
               <Scene key="HomeScreen" component={HomeScreen} hideNavBar/>
               <Scene key="RegisterScreen" component={RegisterScreen} store={UserStore} hideNavBar/>
               <Scene key="LoginScreen" component={LoginScreen} store={UserStore} hideNavBar/>
-                <Scene key="ListProduct" component={ListProduct} keyKategori="fashionWanita" title="List Product" hideNavBar/>
-
-
+              <Scene key="ListProduct" component={ListProduct} hideNavBar/>
+              <Scene key="DetailProduct" component={DetailProduct} title="Detail Product" hideNavBar/>
             </Scene>
           </Scene>
         </Scene>
