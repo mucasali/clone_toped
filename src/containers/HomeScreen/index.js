@@ -6,7 +6,7 @@ import {
   Text,
   View
 } from 'react-native';
-import {Container, Content, Header, Left, Button,
+import {Container, Content, Header, Left, Button, 
   Icon, Body, Right, Title, Input, Grid, Tab, Tabs} from 'native-base'
 import {Actions} from 'react-native-router-flux'
 
@@ -43,7 +43,7 @@ export default class App extends Component<{}> {
 
   renderTabs(kategori_menu, hot_list){
     return(
-      <Tabs initialPage={1}>
+      <Tabs initialPage={0}>
         <Tab heading="BERANDA"
           textStyle={styles.textTabs}
           activeTextStyle={styles.textTabs}
