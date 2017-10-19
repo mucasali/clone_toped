@@ -4,7 +4,7 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View, Image, Dimensions
+  View, Image, Dimensions, TouchableOpacity
 } from 'react-native';
 import {Container, Content, Header, Left, Button, Fab,
   Icon, Body, Right, Title, List, ListItem, Thumbnail} from 'native-base'
@@ -70,22 +70,24 @@ export default class ListProduct extends Component<{}> {
     const {name, location} = seller;
     return(
       <View style={styles.boxContainer} key={iter}>
-        <Image source={{uri:images[0]}}style={styles.imageGrid}/>
-        <View style={{height:80, justifyContent:'space-between'}}>
-          <View style={{height:25}}>
-            <Text numberOfLines={2} style={{fontWeight:'bold', fontSize:12}}>{title}</Text>
+        <TouchableOpacity onPress={()=>{Actions.DetailProduct({product:product})}}>
+          <Image source={{uri:images[0]}}style={styles.imageGrid}/>
+          <View style={{height:80, justifyContent:'space-between'}}>
+            <View style={{height:25}}>
+              <Text numberOfLines={2} style={{fontWeight:'bold', fontSize:12}}>{title}</Text>
+            </View>
+              <Text style={{color:'red'}}>Rp. {price}</Text>
+            <View>
+              <Text style={{fontSize:10}}>{name}</Text>
+              <Text style={{fontSize:10, alignItems:'center'}}>
+                <Icon name="ios-locate-outline" style={{fontSize:10}}/> {location}
+              </Text>
+            </View>
           </View>
-            <Text style={{color:'red'}}>Rp. {price}</Text>
-          <View>
-            <Text style={{fontSize:10}}>{name}</Text>
-            <Text style={{fontSize:10, alignItems:'center'}}>
-              <Icon name="ios-locate-outline" style={{fontSize:10}}/> {location}
-            </Text>
+          <View style={styles.roundedIcon} >
+            <Icon name="md-heart-outline" style={{fontSize:20, color:'#aaa'}}/>
           </View>
-        </View>
-        <View style={styles.roundedIcon} >
-          <Icon name="md-heart-outline" style={{fontSize:20, color:'#aaa'}}/>
-        </View>
+        </TouchableOpacity>
       </View>
     )
   }
