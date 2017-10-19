@@ -3,6 +3,7 @@ import {StyleSheet, Text, ToastAndroid} from 'react-native'
 import {Container, Content, Header, Left, Button, Body, Icon,
   Title, Right, Form, Item, Label, Input} from 'native-base'
 import {Actions} from 'react-native-router-flux'
+import RNAccountKit from 'react-native-facebook-account-kit'
 
 export default class Login extends Component{
 
@@ -57,8 +58,16 @@ export default class Login extends Component{
     )
   }
 
-  handleRegister(store){
-
+  handleLoginFacebook(){
+    RNAccountKit.loginWithPhone().then(
+      (token)=>{
+        if(!token){
+          ToastAndroid.show("Login Canceled", ToastAndroid.SHORT);
+        }else{
+          Actions.HomeScreen()
+        }
+      }
+    )
   }
 
   render(){
@@ -77,7 +86,12 @@ export default class Login extends Component{
                 Actions.HomeScreen()
               }
             }} >
-            <Text style={{color:"#FFF"}}>Masuk</Text>
+            <Text style={styles.textButton}>Masuk</Text>
+          </Button>
+          <Button iconLeft block style={styles.buttonRegister}
+            onPress={this.handleLoginFacebook}>
+            <Icon name="logo-facebook" />
+            <Text style={styles.textButton}> Daftar Dengan Facebook</Text>
           </Button>
         </Content>
       </Container>
@@ -88,5 +102,8 @@ export default class Login extends Component{
 const styles = StyleSheet.create({
   buttonRegister : {
     margin : 10
+  },
+  textButton : {
+    color : '#FFF'
   }
 });

@@ -7,18 +7,19 @@ import {
   View
 } from 'react-native';
 import {Container, Content, Header, Left, Button,
-  Icon, Body, Right, Title, Input, Grid} from 'native-base'
+  Icon, Body, Right, Title, Input, Grid, Tab, Tabs} from 'native-base'
 import {Actions} from 'react-native-router-flux'
 
 import config from '../../config'
 import CardMenu from './components/CardMenu'
+import CardHotList from './components/CardHotList'
 import DumyData from './DumyData.json'
 
 export default class App extends Component<{}> {
 
   renderHeader(title){
     return(
-      <Header
+      <Header hasTabs
         androidStatusBarColor={config.themeColor2}
         searchBar={true}
         style={{backgroundColor:config.themeColor}}>
@@ -40,40 +41,76 @@ export default class App extends Component<{}> {
     )
   }
 
+  renderTabs(kategori_menu, hot_list){
+    return(
+      <Tabs initialPage={1}>
+        <Tab heading="BERANDA"
+          textStyle={styles.textTabs}
+          activeTextStyle={styles.textTabs}
+          tabStyle={{backgroundColor:config.themeColor}}
+          activeTabStyle={{backgroundColor: config.themeColor}}
+        >
+          {this.renderBeranda(kategori_menu)}
+        </Tab>
+        <Tab heading="HOT LIST"
+          textStyle={styles.textTabs}
+          activeTextStyle={styles.textTabs}
+          tabStyle={{backgroundColor:config.themeColor}}
+          activeTabStyle={{backgroundColor: config.themeColor}}
+        >
+          {this.renderHotList(hot_list)}
+        </Tab>
+      </Tabs>
+    )
+  }
+
+  renderBeranda(kategori_menu){
+    return(
+      <Content style={styles.content}>
+        {
+          kategori_menu.map((kategori, iter)=>{
+            return <CardMenu kategori={kategori} key={iter}/>
+          })
+        }
+      </Content>
+    )
+  }
+
+  renderHotList(hot_list){
+    return(
+      <Content style={styles.content} >
+        {
+          hot_list.map((list, iter)=>{
+            return (
+              <CardHotList hotList={list} key={iter}
+              titleStyle={{color:config.themeColor2, fontWeight:'bold'}}
+              pricestyle={{color:'#4e4b4b', fontWeight:'bold'}}/>
+            )
+          })
+        }
+      </Content>
+    )
+  }
+
 
   render() {
     console.log('dumy data', DumyData);
-    const {kategori_menu} = DumyData;
+    const {kategori_menu, hot_list} = DumyData;
     return (
       <Container>
         {this.renderHeader("")}
-        <Content style={{margin:5}}>
-          {
-            kategori_menu.map((kategori, iter)=>{
-              return <CardMenu kategori={kategori} key={iter}/>
-            })
-          }
-        </Content>
+        {this.renderTabs(kategori_menu, hot_list)}
       </Container>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  textTabs : {
+    color: '#fff', fontWeight: 'bold', fontSize:10
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  Content : {
+    margin : 5,
+    backgroundColor : '#4e4b4b'
+  }
 });

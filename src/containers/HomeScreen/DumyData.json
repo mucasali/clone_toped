@@ -90,5 +90,14 @@
         ],
       ]
     }
+  ],
+  "hot_list" : [
+    {"key":"000", "title":"Tumit Anti Pecah Pecah", "price":"20rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/375/hot_product/2017/10/18/9/39/28/22150512/tumit-anti-pecah-pecah.jpg"},
+    {"key":"001", "title":"Hijab Instans Termurah", "price":"20rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/300-square/attachment/2017/10/16/18088078/18088078_a9b4925a-57b6-489c-8694-b521f166302f.jpg"},
+    {"key":"002", "title":"Earphone JBL di Bawah 100rb", "price":"45rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/300-square/attachment/2017/10/13/17027990/17027990_5b0b3d23-0d3e-444a-a6e7-03075b3b4b42.jpg"},
+    {"key":"003", "title":"Lilin Aromaterapi Anti Stres", "price":"2rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/300-square/attachment/2017/10/18/20723472/20723472_a0971594-51dd-4c6a-a745-33a01381dab7.jpg"},
+    {"key":"004", "title":"Dekorasi Terrarium Kekinian", "price":"37rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/375/hot_product/2017/10/19/10/23/35/20723472/dekorasi-terrarium-kekinian.jpg"},
+    {"key":"005", "title":"Botol Susu BPA Free", "price":"20rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/375/hot_product/2017/10/18/10/56/47/12159238/botol-susu-bpa-free.jpg"},
+    {"key":"006", "title":"10 Step Korean Skincare", "price":"40rb", "urlPicture":"https://ecs7.tokopedia.net/img/cache/375/hot_product/2017/10/16/13/57/26/19621304/10-step-korean-skincare.jpg"},
   ]
 }
